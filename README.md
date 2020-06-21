@@ -5,7 +5,7 @@ any purpose.  USE AT YOUR OWN RISK.
 A C based package (more or less) to read analog values from
 an ADS1115 A/D board.
 
-I give original credit to Loewis Loflin at bristolwatch.com
+I give original credit to Lewis Loflin at bristolwatch.com
 as he was the one that deciphered the cut sheet for the 
 ADS1115 register instructions.
 
