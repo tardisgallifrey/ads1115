@@ -1,3 +1,7 @@
+**WARNING**
+Use of this code or anything here is given without warranty for 
+any purpose.  USE AT YOUR OWN RISK.
+
 A C based package (more or less) to read analog values from
 an ADS1115 A/D board.
 
