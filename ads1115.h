@@ -2,6 +2,9 @@
 //to allow easier configuration of 
 //ADS1115 register calls
 
+
+#include <inttypes.h>  // uint8_t, etc
+
 //ADS1115 possible addresses
 #define HEX48 0b1001000  //Hex 48
 #define HEX49 0b1001001  //Hex 49
@@ -32,4 +35,6 @@
 #define GAIN6 0b00001010  //FS  .256
 #define GAIN7 0b00001100  //FS  .256
 #define GAIN8 0b00001110  //FS  .256
+
+int16_t ads_read( int address, int ain, int gain );
 

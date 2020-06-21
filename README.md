@@ -2,6 +2,13 @@
 Use of this code or anything here is given without warranty for 
 any purpose.  USE AT YOUR OWN RISK.
 
+
+Update 6/21/2020: added adsget.c and modded Makefile to adapt.
+
+06/21/2020: run "make clean simple" to produce ads_get
+ads_get takes numbers on command line for address, ai line, and gain.
+Will produce one read of ai line.  This is prep for use in PHP.
+
 Short cut:
 If you fork this repo to your own Raspberry Pi, you should 
 be able to run "make clean default" in order to produce 
