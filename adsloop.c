@@ -12,7 +12,7 @@
 #include <stdlib.h>    // exit
 #include "ads1115.h"   // needed for ads1115 system variables
 
-int16_t ads_read( int address, int shot1, int ain, int gain );
+int16_t ads_read( int address, int ain, int gain );
 
 
 //Future Addressing from command line:
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 
    while(1){
 
-      analog_in = ads_read( HEX48, ONESHOT_ON, AI3, GAIN2 );
+      analog_in = ads_read( HEX48, AI3, GAIN2 );
       if( analog_in != -1 ){
 
          printf("ADS voltage is: %4.3f\n", analog_in * VPS);

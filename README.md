@@ -2,6 +2,16 @@
 Use of this code or anything here is given without warranty for 
 any purpose.  USE AT YOUR OWN RISK.
 
+Short cut:
+If you fork this repo to your own Raspberry Pi, you should 
+be able to run "make clean default" in order to produce 
+the current version of ads_read.  
+
+Run this with "sudo ./ads_read" on Linux and you ought to get a 
+stream from STD_IN on your terminal with the voltage of your
+chosen AI line on the ADS1115.
+
+Long story:
 A C based package (more or less) to read analog values from
 an ADS1115 A/D board.
 

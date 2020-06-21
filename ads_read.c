@@ -11,7 +11,7 @@
 
 
 
-int16_t ads_read( int address, int shot1, int ain, int gain ){
+int16_t ads_read( int address, int ain, int gain ){
 
    int fd;
    int16_t val;
@@ -32,7 +32,7 @@ int16_t ads_read( int address, int shot1, int ain, int gain ){
    // set config register and start conversion
 
    writeBuf[0] = 1;    // config register is 1
-   writeBuf[1] = shot1 + ain + gain;
+   writeBuf[1] = ONESHOT_ON + ain + gain;
    writeBuf[2] = 0b10000101; // bits 7-0  0x85
 
    // begin conversion
