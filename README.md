@@ -5,7 +5,7 @@ any purpose.  USE AT YOUR OWN RISK.
 
 Update 6/21/2020: added adsget.c and modded Makefile to adapt.
 
-06/21/2020: run "make clean simple" to produce ads_get
+06/21/2020: run "make clean simple" to produce ads_get.
 ads_get takes numbers on command line for address, ai line, and gain.
 Will produce one read of ai line.  This is prep for use in PHP.
 
@@ -16,7 +16,7 @@ the current version of ads_read.
 
 Run this with "sudo ./ads_read" on Linux and you ought to get a 
 stream from STD_IN on your terminal with the voltage of your
-chosen AI line on the ADS1115.
+chosen AI line (configured in the program) on the ADS1115.
 
 Long story:
 A C based package (more or less) to read analog values from
@@ -27,7 +27,7 @@ as he was the one that deciphered the cut sheet for the
 ADS1115 register instructions.
 
 I have altered the original C code to function-ize the
-basic register calling and turn it into a returned voltage.
+basic register calling and turn it into a returned decimal value (0-32767).
 
 I also put the function into its own file so that one can
 write code using the function without having to keep track
@@ -56,11 +56,6 @@ read and shutdown operation or continuous read.  Loewis didn't
 go into continuous read much and the 1-shot setting works well,
 so I've set it permanently in the function.  
 
-Configuration Register MSB values 
-Define 1-shot read or continuous
-ONESHOT_ON
-ONESHOT_OFF
-
 There are four analog inputs on the ADS1115 board.  The following
 predefined values tell which one to read from.
 AI0
@@ -82,7 +77,7 @@ easily read up to 16 0-3.3VDC or 0-5VDC sensors.
 
 Things to do:
 1. Currently working on a main program that reads function 
-values from the command line and returns the value.
+values from the command line and returns the value (in progress, see adsget.c).
 2. Plan to write program such that it can be used with PHP
 to display an analog input value in a web page.
 3. Not a programming task, but experiment with a way to 
