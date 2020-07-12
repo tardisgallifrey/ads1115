@@ -46,7 +46,7 @@ int16_t ads_read( int address, int ain, int gain ){
 
    do{
       if (read(fd, writeBuf, 2) != 2) {
-        perror("Read conversion failure\n");
+        perror("Read conversion failure-1\n");
         return -1;
       }
    }while ((writeBuf[0] & 0x80) == 0);
@@ -63,7 +63,7 @@ int16_t ads_read( int address, int ain, int gain ){
 
    // read 2 bytes
    if (read(fd, readBuf, 2) != 2) {
-      perror("Read conversion failure\n");
+      perror("Read conversion failure-2\n");
       return -1;
    }
 

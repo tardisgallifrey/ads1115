@@ -19,7 +19,7 @@
 
 int fd;
 // Note ads1115 defaults to 0x48!
-int ads_address = 0x48;
+int ads_address = 0x49;
 
 //16 bit integer exactly
 int16_t val;
@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
   // ANC1 and GND, 4.096v, 128s/s
 
   writeBuf[0] = 1;    // config register is 1
-  writeBuf[1] = 0b11010011; // bit 15-8 0xD3
+  writeBuf[1] = 0b11010101; // bit 15-8 0xD3
 
   // bit 15 flag bit for single shot
   // Bits 14-12 input selection:
