@@ -7,7 +7,13 @@ Update 6/21/2020: added adsget.c and modded Makefile to adapt.
 
 06/21/2020: run "make clean simple" to produce ads_get.
 ads_get takes numbers on command line for address, ai line, and gain.
-Will produce one read of ai line.  This is prep for use in PHP.
+Will produce one read of ai line.  This is prep for use in PHP and 
+other programs.
+
+example: ads_get 1 2 2
+(where 1 = address 0x48,
+ 2 = ain2, and
+ 2 = voltage range 4.096 (for 5V and 3.3V))
 
 Short cut:
 If you fork this repo to your own Raspberry Pi, you should 
@@ -84,3 +90,6 @@ to display an analog input value in a web page.
 use opto-isolators in the SDA/SCL lines so that the ADS1115
 can be used at 5VDC but still operate on the Raspberry PI 3.3VDC
 enabled I2C bus.
+4. Currently, working on porting this project over to C++,
+   C# (.NET), and possibly Go.  There will be future folders
+   appearing when these begin to be finalized.
